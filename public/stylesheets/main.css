@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    text-align: center;
+    background-color: #ddd;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald','Raleway',"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header.sticky{
+    /* background: rgb(75, 68, 68); */
+    background-color: #555;
+    padding: 5px 100px;
+    opacity: .9;
+    box-shadow: 0 5px 20px rgba(255, 3, 3, 0.05);
+}
+header.sticky .home-logo,header.sticky .navigation li a{
+    color: #fff;
+    /* color: #111; */
+
+}
+header .home-logo{
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+header .home-logo:hover,header .navigation li a:hover{
+    /* color: #ffee00; */
+    color: #000;
+}
+header .navigation
+{
+    position: relative;
+    display: flex;
+}
+header .navigation li
+{
+    list-style: none;
+    margin-left: 30px;
+    padding-top: 20px;
+}
+header .navigation li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+header .znav div{
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 25px;
+    transition: .3s;
+}
+header .znav{
+    width: 30px;
+    display: block;
+    margin: 1em 0 0 1em;
+}
+header .znav .one-bar{
+    width: 30px;
+}
+header .znav .two-bar{
+    width: 20px;
+}
+header .znav:hover div{
+    min-width: 30px;
+}
+header .znav .three-bar{
+    width: 25px;
+}
+header nav{
+    cursor: pointer;
+}
+/* ---------------------------------- */
+@media screen and (max-width: 768px) {
+    header .navigation,header .home-logo{
+        display: none;
+    }
+    header{
+        padding: 0;
+    }
+  }
+  @media screen and (min-width: 769px) {
+    header .znav{
+        display: none;
+    }
+  }
+/* ================================= */
+section.home .content{
+    position: relative;
+    background: fixed;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(https://res.cloudinary.com/zaid/image/upload/v1606365865/Myblog-1/11_h3qw95.jpg); */
+    background-image: url(https://res.cloudinary.com/zaid/image/upload/v1605666188/Myblog-1/1_uhhz1b.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+section.home .content .name-tag,section.home .content .bio-tag{
+    position: absolute;
+    width: 100%;
+}
+section.home .content .name-tag{
+    top: 40%;
+}
+section.home .content .bio-tag{
+    top: 55%;
+}
+section.home .content h1{
+    color: white;
+    display: block;
+    letter-spacing: 17px;
+    width: 100%;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 56px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+section.home .content h5{
+    color: white;
+    text-align: center;
+    letter-spacing: 15px;
+    padding: 0 10px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    display: block;
+}
+@media screen and (max-width: 513px) {
+    section.home .content h1{
+        font-size: 40px;
+        letter-spacing: 9px;
+    }
+    section.home .content h5{
+        font-size: 13px;
+        letter-spacing: 7px;
+        font-weight: 600;
+    }
+  }
+/* =========================================== */
+section#about .card,section#mywork .work-content .card,section#about .card-img{
+    border: none;
+    border-radius: 0;
+}
+section#about .colour{
+    background-color: #313336;
+}
+section#mywork .card-body,section#about .card-body{
+    padding: 10%;
+}
+section#about .card-text,section#about .card-title{
+    color: white;
+}
+/* ================================================ */
+section#mywork .card-body a{
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #212529;
+    color: white;
+    transition: 0.2s;
+}
+section#mywork .card-body a:hover{
+    color: rgb(106, 107, 114);
+}
+section#mywork .card-body a i{
+    padding-left: 5px;
+    font-size: 14px;
+}
+section#mywork .card{
+    background-color: #ddd;
+    color: #000;
+}
+/* ================================================ */
+section#media{
+    padding: 50px 0;
+    background-color: #112;
+}
+section#media .insta-click{
+    border: none;
+    /* border: 1.5px solid #777; */
+    border-radius: 10%;
+}
+section#media .insta-click:hover{
+    /* border: 1.5px solid #777; */
+    border: none;
+}
+section#media .fa{
+    padding: 50px;
+    display: inline-block;
+    font-size: 100px;
+    text-align: center;
+    color: #777;
+    transform: translate(0,0);
+}
+/* section#media .fa:hover{
+    color: #fff;
+} */
+section#media .fa-instagram:hover{
+    color: #ff0062;
+}
+section#media .fa-twitter:hover{
+    color: #0099ff;
+}
+section#media .fa-facebook:hover{
+    color: #002fff;
+}
+/* -------------------------------------- */
+@media screen and (max-width: 575px) {
+    section#media{
+        margin: 0 15%;
+    }
+  }
+/* ====================================== */
+section#feedback .feed-form{
+    margin: 10% 25% 10% 25%;
+    width: 100%;
+    max-width: 320px;
+}
+section#feedback .thank{
+    text-align: center;
+    margin: 10% 0 10% 10%;
+}
+section#feedback input,section#feedback textarea,section#feedback button{
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f5f5f5;
+    width: 100%;
+    min-width: 300px;
+    display: block;
+    margin-bottom: 15px;
+    resize: none;
+    border: none;
+    font: inherit;
+    border-radius: 2%;
+    padding: 10px;
+    padding-left: 20px;
+}
+section#feedback input{
+    height: 50px;
+}
+section#feedback ::placeholder { 
+    color: #112;
+    opacity: 0.5;
+}
+section#feedback button{
+    background-color: #112;
+    color: #fff;
+}
+section#feedback button:hover{
+    background-color: #123;
+}
+section#feedback .onsubmit{
+    position: relative;
+    width: 100%;
+}
+section#feedback .onsubmit h4{
+    position: absolute;
+    padding: 2px;
+    width: 100%;
+    background-color: rgb(203, 229, 153);
+}
+/* -------------------------------- */
+@media screen and (max-width: 899px) and (min-width: 768px) {
+    section#feedback .feed-form{
+        margin: 10% 10% 10% 15%;
+        width: 50%;
+    }
+    section#feedback .onsubmit h4{
+        position: absolute;
+        margin: 0 30% 0 20%;
+        padding: 2px;
+        width: 100%;
+        background-color: rgb(203, 229, 153);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    section#feedback .feed{
+        margin: 0 25% 10% 25%;
+        width: 50%;
+    }
+    section#feedback .feed-form{
+        margin: 0;
+    }
+    section#feedback .thank{
+        margin: 10% 10% 10% 10%;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    section#feedback .onsubmit h4{
+        position: absolute;
+        padding: 2px;
+        font-size: 15px;
+        width: 300px;
+        background-color: rgb(203, 229, 153);
+    }
+  }
+  @media screen and (max-width: 575px) {
+    section#feedback .feed{
+        margin: 0 25% 10% 20%;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    section#feedback .feed{
+        margin: 0 25% 10% 9%;
+        width: 50%;
+    }
+    section#feedback #submit{
+        margin-bottom: 5px;
+    }
+  }
+  @media screen and (max-width: 355px) {
+    section#feedback .feed{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+  }
+/* ========================== */
+footer, footer .container{
+    background-color: #555;
+    height: 30px;
+}
+footer .container i{
+    padding-top: 6px;
+}
+footer .container .row, footer .container .i-col{
+    max-height: 30px;
+}
+footer .container h6{
+    margin: 0;
+}
+footer .disp{
+    display: none;
+}
+/* --------------------- */
+@media screen and (max-width: 768px) {
+    footer .container{
+        margin: 0;
+        min-width: 99%;
+    }
+    footer h6{
+        font-size: 72%;
+        padding-top: 3px;
+        font-weight: bold;
+    }
+  }
+  @media screen and (min-width: 576px) {
+    footer #foot1{
+        display: none;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    footer #foot2{
+        display: none;
+    }
+  }
+  /* =================================== */
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  /* ------------------- */
+  @media screen and (min-width: 769px) {
+    .sidenav{
+        display: none;
+    }
+  }
+   @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
