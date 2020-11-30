@@ -307,6 +307,12 @@ section#feedback .onsubmit h4{
     section#feedback .thank{
         margin: 10% 10% 10% 10%;
     }
+    section#feedback .col-md-6{
+        padding: 0;
+    }
+    section#feedback .row{
+        margin: 0;
+    }
   }
   @media screen and (max-width: 575px) {
     section#feedback .onsubmit h4{
