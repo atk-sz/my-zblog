@@ -114,7 +114,6 @@ section.home .content{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-image: url(https://res.cloudinary.com/zaid/image/upload/v1606365865/Myblog-1/11_h3qw95.jpg); */
     background-image: url(https://res.cloudinary.com/zaid/image/upload/v1605666188/Myblog-1/1_uhhz1b.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -160,7 +159,11 @@ section.home .content h5{
         letter-spacing: 7px;
         font-weight: 600;
     }
+    section.home .content{
+        background-image: url(https://res.cloudinary.com/zaid/image/upload/v1606365865/Myblog-1/11_h3qw95.jpg);
+      }
   }
+  
 /* =========================================== */
 section#about .card,section#mywork .work-content .card,section#about .card-img{
     border: none;
@@ -416,6 +419,9 @@ footer .disp{
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+  }
+  #nav-button{
+      filter: invert(1);
   }
   /* ------------------- */
   @media screen and (min-width: 769px) {
