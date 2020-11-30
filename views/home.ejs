@@ -202,6 +202,9 @@
                         $('.onsubmit').html('<h4>' + msg.message + '</h4>', setTimeout(function () {
                             $('.onsubmit').empty();
                         }, 1500));
+                        $("#user-name").val('');
+                        $("#user-email").val('');
+                        $("#user-text").val('');
                     }
                     else
                         $('body').find('.onsubmit').html('<h4 style="background-color: rgb(235, 158, 158);">' + msg.message + '</h4>', setTimeout(function () {
