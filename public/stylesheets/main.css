@@ -114,7 +114,7 @@ section.home .content{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(https://res.cloudinary.com/zaid/image/upload/v1605666188/Myblog-1/1_uhhz1b.jpg);
+    background-image: url("images/1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }

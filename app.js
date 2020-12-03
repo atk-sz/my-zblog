@@ -10,6 +10,7 @@ const express = require('express'),
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public/"));
+app.use(express.static(__dirname + "/images/"));
 
 app.get('/', (req, res) => {
     res.render('home')
