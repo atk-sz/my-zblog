@@ -1,4 +1,4 @@
-console.log(window.innerWidth)
+// console.log(window.innerWidth)
 const header = document.querySelector('header');
 window.addEventListener('resize', () => {
     if (window.innerWidth <= 768)
@@ -33,16 +33,19 @@ $('#submit').on('click', (event) => {
                 $('.onsubmit').html('<h4>' + msg.message + '</h4>', setTimeout(function () {
                     $('.onsubmit').empty();
                 }, 1500));
+                $("#user-name").val('');
+                $("#user-email").val('');
+                $("#user-text").val('');
             }
             else
                 $('body').find('.onsubmit').html('<h4 style="background-color: rgb(235, 158, 158);">' + msg.message + '</h4>', setTimeout(function () {
                     $('.onsubmit').empty();
-                }, 3000));
+                }, 2000));
         },
         error: (msg) => {
             $('body').find('.onsubmit').html('<h4 style="background-color: rgb(235, 158, 158);">Message could not be sent</h4>', setTimeout(function () {
                 $('.onsubmit').empty();
-            }, 5000));
+            }, 3000));
         }
     });
 });
