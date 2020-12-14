@@ -1,4 +1,14 @@
 // console.log(window.innerWidth)
+$("body").on('click', () => {
+    document.getElementById("mySidenav").style.width = "0";
+})
+$("#mySidenav").on('click',(e)=>{
+    e.stopPropagation();
+})
+$("#nav-button").on('click',(e)=>{
+    e.stopPropagation();
+})
+
 const header = document.querySelector('header');
 window.addEventListener('resize', () => {
     if (window.innerWidth <= 768)
