@@ -1,12 +1,14 @@
-// console.log(window.innerWidth)
 $("body").on('click', () => {
-    document.getElementById("mySidenav").style.width = "0";
+    closeNav();
 })
 $("#mySidenav").on('click',(e)=>{
     e.stopPropagation();
 })
 $("#nav-button").on('click',(e)=>{
     e.stopPropagation();
+})
+$(".to-close-nav").on("click",(e)=>{
+    closeNav();
 })
 
 const header = document.querySelector('header');
@@ -21,9 +23,7 @@ window.addEventListener('scroll', () => {
     if (window.innerWidth > 768)
         header.classList.toggle('sticky', window.scrollY > 0);
 });
-// document.getElementById("submit").addEventListener("click", function () {
-//     document.getElementById("res-message").innerHTML = "Hello World";
-// });
+
 $('#submit').on('click', (event) => {
     event.preventDefault();
     $('.onsubmit').empty();
